@@ -25,20 +25,20 @@ const commentSchema = new Schema({
 const dishSchema = new Schema({
     name: {
         type: String,
-        
+        required: true,
         unique: true
     },
     description: {
         type: String,
-        
+        required: true
     },
     image: {
         type: String,
-    
+        required: true
     },
     category: {
-        type: String
-
+        type: String,
+        required: true
     },
     label: {
         type: String,
@@ -46,7 +46,7 @@ const dishSchema = new Schema({
     },
     price: {
         type: Currency,
-        
+        required: true,
         min: 0
     },
     featured: {
